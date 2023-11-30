@@ -1,3 +1,49 @@
 * {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(241, 239, 239);
+}
+img {
+  width: 180px;
+  border-radius: 10px;
+}
+
+article {
+  border-radius: 20px;
+  padding: 25px;
+  margin: 10px;
+  background-color: white;
+}
+
+h2 {
+  color: black;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+button {
+  box-shadow: none;
+  color: rgb(0, 149, 255);
+  background: transparent;
+  border: none;
+  margin: -6px;
+}
+
+.account {
+  font-size: 18px;
+  color: gainsboro;
+}
+
+.title {
+  text-transform: uppercase;
+  line-height: 30px;
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: px;
 }
