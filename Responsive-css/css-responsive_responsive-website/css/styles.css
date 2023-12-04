@@ -247,6 +247,49 @@ width, etc. */
 /* Replace this comment with your media query. */
 /* --- */
 
+@media (min-width: 800px) {
+  .card-section {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card-section > * {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  body,
+  .main-header,
+  .navbar {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .card-section {
+    overflow-x: hidden;
+    padding-bottom: 50px;
+  }
+  .card-section {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card-section > * {
+    width: 45%;
+  }
+
+  .product-card.--forest {
+    height: 500px;
+    width: 100vw;
+  }
+  .main-content {
+    padding: 0;
+  }
+  .intro-text {
+    font-size: 20px;
+  }
+}
 /* Media Query Desktop */
 /* --- */
 /* Replace this comment with your media query. */
