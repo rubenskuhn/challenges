@@ -1,7 +1,7 @@
 console.clear();
 
-const operand1 = 12;
-const operand2 = 4;
+let operand1 = 12;
+let operand2 = 4;
 
 /*
 Mathematical operations
@@ -15,26 +15,38 @@ const moduloButton = document.querySelector('[data-js="modulo"]');
 
 addButton.addEventListener("click", () => {
   // 1. Add the two operands and store the result in a variable. Log the variable's value to the console.
+  let sum = operand1 + operand2;
+  console.log("sum" + " " + "=" + " " + sum);
 });
 
 subtractButton.addEventListener("click", () => {
   // 2. Subtract the two operands and store the result in a variable. Log the variable's value to the console.
+  let subtraction = operand1 + operand2;
+  console.log("subtraction" + " " + "=" + " " + subtraction);
 });
 
 multiplyButton.addEventListener("click", () => {
   // 3. Multiply the two operands and store the result in a variable. Log the variable's value to the console.
+  let multiplication = operand1 * operand2;
+  console.log("multiplication" + " " + "=" + " " + multiplication);
 });
 
 divideButton.addEventListener("click", () => {
   // 4. Divide the two operands and store the result in a variable. Log the variable's value to the console.
+  let division = operand1 / operand2;
+  console.log("division" + " " + "=" + " " + division);
 });
 
 exponentButton.addEventListener("click", () => {
   // 5. Raise "operand1" to the value of "operand2" and store the result in a variable. Log the variable's value to the console.
+  let potence = operand1 ** operand2;
+  console.log("potence" + " " + "=" + " " + potence);
 });
 
 moduloButton.addEventListener("click", () => {
   // 6. Calculate the remainder when dividing "operand1" by "operand2" and store the result in a variable. Log the variable's value to the console.
+  let remainder = operand1 % operand2;
+  console.log("remainder" + " " + "=" + " " + remainder);
 });
 
 /*
@@ -61,10 +73,14 @@ const divideByTwoButton = document.querySelector('[data-js="divide-by-two"]');
 
 increaseByOneButton.addEventListener("click", () => {
   // 7. Increase the value of "operand1" by 1. Log the new value to the console.
+  operand1 = operand1 + 1;
+  console.log("New operand1" + " " + "=" + " " + operand1);
 });
 
 increaseByFiveButton.addEventListener("click", () => {
   // 8. Increase the value of "operand1" by 5. Log the new value to the console.
+  operand1 = operand1 + 5;
+  console.log("New operand1" + " " + "=" + " " + operand1);
 });
 
 decreaseByOneButton.addEventListener("click", () => {
@@ -82,3 +98,10 @@ multiplyByTwoButton.addEventListener("click", () => {
 divideByTwoButton.addEventListener("click", () => {
   // 12. Divide the value of "operand1" by 2. Log the new value to the console.
 });
+
+//little trick for me to visualize the log resulst
+window.console = {
+  log: function (scr) {},
+};
+document.getElementById("operand1output").textContent = operand1;
+document.getElementById("operand2output").textContent = operand2;
