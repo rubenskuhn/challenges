@@ -1,5 +1,3 @@
-console.clear();
-
 /*
 1: Create the data for a book in an online store. Create variables for the following data:
   - the book title
@@ -9,6 +7,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+
+let booktitle;
+let author;
+let rating;
+let sales;
 
 // --^-- write your code here --^--
 
@@ -26,6 +29,18 @@ Then log all variables to the console again.
 
 // --v-- write your code here --v--
 
+booktitle = "The Lord of the Javascript";
+author = "Mario";
+rating = 4.2;
+sales = 120;
+logBookData();
+
+//arbitrarly adding 100 to sales, and subtrating one from rating
+
+sales = sales + 100;
+rating = rating - 1;
+logBookData();
+
 // --^-- write your code here --^--
 
 /*
@@ -38,4 +53,49 @@ Then log all variables to the console again.
 
 // --v-- write your code here --v--
 
+function logBookData() {
+  console.log(
+    booktitle +
+      ", by " +
+      author +
+      ", rating: " +
+      rating +
+      ", total sales: " +
+      sales
+  );
+}
+let operand1 = 100;
+let operand2 = 400;
+
+sales = sales + operand1;
+logBookData();
+
+sales = sales + operand2;
+logBookData();
+
+let logger = logBookData();
+
 // --^-- write your code here --^--
+
+//little trick for me to visualize the log resulst
+// 1. Add the two operands and store the result in a variable. Log the variable's value to the console.
+
+const addButton = document.querySelector('[data-js="add"]');
+
+addButton.addEventListener("click", () => {
+  // 1. Add the two operands and store the result in a variable. Log the variable's value to the console.
+  sales = sales + operand2;
+  logBookData();
+});
+document.getElementById("output1").textContent = booktitle;
+document.getElementById("output2").textContent = author;
+document.getElementById("output3").textContent = sales;
+document.getElementById("output4").textContent = rating;
+
+window.console = {
+  log: function (str) {
+    let node = document.createElement("div");
+    node.appendChild(document.createTextNode(str));
+    document.getElementById("logger").appendChild(node);
+  },
+};

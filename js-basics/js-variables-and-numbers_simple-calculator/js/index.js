@@ -101,7 +101,11 @@ divideByTwoButton.addEventListener("click", () => {
 
 //little trick for me to visualize the log resulst
 window.console = {
-  log: function (scr) {},
+  log: function (str) {
+    var node = document.createElement("div");
+    node.appendChild(document.createTextNode(str));
+    document.getElementById("logger").appendChild(node);
+  },
 };
 document.getElementById("operand1output").textContent = operand1;
 document.getElementById("operand2output").textContent = operand2;

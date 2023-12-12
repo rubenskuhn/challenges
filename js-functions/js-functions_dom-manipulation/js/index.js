@@ -3,6 +3,7 @@ const redButton = document.querySelector("[data-js=js-red-button]");
 const greenButton = document.querySelector("[data-js=js-green-button]");
 const blueButton = document.querySelector("[data-js=js-blue-button]");
 const grayButton = document.querySelector("[data-js=js-gray-button]");
+const wilberButton = document.querySelector("[data-js=js-wilber-button]");
 
 /*
 We want to add some functionality to the buttons on this page. When pressing a button, the corresponding color should be applied to the box.
@@ -15,24 +16,50 @@ redButton.addEventListener("click", () => {
   // use your functions to
   // - remove all classes
   // - then add the class name: "red"
+  removeAllColors();
+  addColor("red");
 });
 
 blueButton.addEventListener("click", () => {
   // use your functions to
   // - remove all classes
   // - then add the class name: "blue"
+  removeAllColors();
+  addColor("blue");
 });
 
 greenButton.addEventListener("click", () => {
   // use your functions to
   // - remove all classes
   // - then add the class name: "green"
+  removeAllColors();
+  addColor("green");
 });
 
 grayButton.addEventListener("click", () => {
   // use your functions to
   // - remove all classes
   // - then add the class name: "gray"
+  removeAllColors();
+  addColor("gray");
+});
+
+wilberButton.addEventListener("click", () => {
+  // fooling arround with new button and color
+  removeAllColors();
+  addColor("wilber");
 });
 
 // Write your two functions below:
+
+//let allColors;
+//allColors = "red" + "gray" + "wilber" + "green" + "blue";
+
+function removeAllColors() {
+  box.classList.remove("red", "gray", "wilber", "green", "blue");
+  //box.classList.remove("");
+}
+
+function addColor(color) {
+  box.classList.add(color);
+}
