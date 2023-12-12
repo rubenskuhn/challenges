@@ -57,7 +57,8 @@ wilberButton.addEventListener("click", () => {
 
 function removeAllColors() {
   box.classList.remove("red", "gray", "wilber", "green", "blue");
-  //box.classList.remove("");
+  //box.classList.remove();
+  //box.classList.add(box);
 }
 
 function addColor(color) {
