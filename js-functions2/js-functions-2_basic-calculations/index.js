@@ -10,25 +10,45 @@ They should return the result of the respective calculation:
 - remainder: the modulo or remainder of of "a modulo b"
 */
 
+// first exercise:
 function add(a, b) {
   // Code here
+  return a + b;
 }
+let show1 = add(18, 18);
+console.log(show1);
 
+// 2nd exercise:
 function subtract(a, b) {
   // Code here
+  return a - b;
 }
+let show2 = subtract(18, 18);
+console.log(show2);
 
+// 3rd exercise:
 function multiply(a, b) {
   // Code here
+  return a * b;
 }
+let show3 = multiply(18, 18);
+console.log(show3);
 
+// 4th exercise:
 function divide(a, b) {
   // Code here
+  return a / b;
 }
+let show4 = divide(18, 18);
+console.log(show4);
 
+// 5th exercise:
 function remainder(a, b) {
   // Code here
+  return a % b;
 }
+let show5 = remainder(18, 18);
+console.log(show5);
 
 /*
 These console.asserts check if your functions are correct. If nothing appears in your console it works properly!
